@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.1
+    ports:
+      - "5672:5672"
+    networks:
+      - my_network
+
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - rabbitmq
+    networks:
+      - my_network
+
+networks:
+  my_network:
