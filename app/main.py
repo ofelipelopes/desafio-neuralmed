@@ -1,10 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-import pika  # import RabbitMQ library
+import pika
 import json
-from fastapi import FastAPI
 from typing import List
-import json
 import torch
 from transformers import AutoTokenizer, AutoModelForTokenClassification
 import time
