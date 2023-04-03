@@ -78,7 +78,7 @@ async def save_patient(patient_info: PatientInfo):
 
 @app.get("/patients/{patient_id}")
 async def get_patient_medical_records(patient_id: str):
-    """Gel all the medical records for a given patient (using the patient ID)"""
+    """Get all the medical records for a given patient (using the patient ID)"""
 
     medical_records = []
 
