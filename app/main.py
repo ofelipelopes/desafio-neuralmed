@@ -82,7 +82,6 @@ async def get_patient_medical_records(patient_id: str):
 
     medical_records = []
 
-    # Consume messages from the patient queue until there are none left or timeout
     start_time = time.time()
     while True:
         method_frame, properties, body = channel.basic_get(queue='patient_queue', auto_ack=True)
