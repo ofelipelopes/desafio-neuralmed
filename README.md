@@ -31,4 +31,4 @@ Foi mantida uma arquitetura mais simples, devido a baixa complexidade do projeto
 ## Resposta da pergunta extra:
 Uma opção seria mudar o delivery_mode do RabbitMQ no código, desativando as mensagens persistentes, que são salvas no HD, permitindo elas serem armazenadas em memoria, possuindo processos de leitura/escrita mais rápidos.
 
-Existe a opção de usar o [Celery](https://docs.celeryq.dev/en/stable/), permitindo escalar de forma horizontal usando queues assíncronas, além de funcionar muito bem em conjunto com o RabbitMQ.
+Existe a opção de usar o [Celery](https://docs.celeryq.dev/en/stable/) que além de funcionar muito bem em conjunto com o RabbitMQ, permite escalar de forma horizontal usando queues assíncronas e com processos distribuídos dos Celery workers, que funcionam de forma independente da aplicação principal.
